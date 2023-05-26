@@ -34,7 +34,7 @@ int main() {
     std::cout << "Enter the number of purchased robots:" << '\n';
     for (int i = 0; i < m; i++) {
         int index;
-        std::cout << "Введите номер " << i + 1 << " purchased robot: ";
+        std::cout << "Enter the number " << i + 1 << " purchased robot: ";
         std::cin >> index;
 
         // Проверяем, чтобы индекс был в допустимом диапазоне
@@ -48,7 +48,7 @@ int main() {
             robots.resize(robots.size() - 1);
         }
         else {
-            std::cout << "Неверный индекс покупаемого робота. Пропускаем покупку." << '\n';
+            std::cout << "Wrong index of purchased robot. Skipping purchase." << '\n';
         }
     }
 
