@@ -13,31 +13,29 @@
 #include <iostream>
 #include <vector>
 
-using namespace std;
-
 int main() {
     int n;
-    cout << "Введите количество роботов на витрине: ";
-    cin >> n;
+    std::cout << "Enter the number of robots in the window: ";
+    std::cin >> n;
 
     // Создаем вектор для хранения номеров роботов
-    vector<int> robots(n);
+    std::vector<int> robots(n);
     
-    cout << "Введите номера роботов:" << endl;
+    std::cout << "Enter the robot numbers:" << '\n';
     for (int i = 0; i < n; i++) {
-        cout << "Введите номер " << i + 1 << "-го робота: ";
-        cin >> robots[i];
+        std::cout << "Enter the number " << i + 1 << " robot: ";
+        std::cin >> robots[i];
     }
 
     int m;
-    cout << "Введите количество покупок роботов: ";
-    cin >> m;
+    std::cout << "Enter the number of robot purchases: ";
+    std::cin >> m;
 
-    cout << "Введите номера покупаемых роботов:" << endl;
+    std::cout << "Enter the number of purchased robots:" << '\n';
     for (int i = 0; i < m; i++) {
         int index;
-        cout << "Введите номер " << i + 1 << "-го покупаемого робота: ";
-        cin >> index;
+        std::cout << "Введите номер " << i + 1 << " purchased robot: ";
+        std::cin >> index;
 
         // Проверяем, чтобы индекс был в допустимом диапазоне
         if (index >= 0 && index < robots.size()) {
@@ -50,15 +48,15 @@ int main() {
             robots.resize(robots.size() - 1);
         }
         else {
-            cout << "Неверный индекс покупаемого робота. Пропускаем покупку." << endl;
+            std::cout << "Неверный индекс покупаемого робота. Пропускаем покупку." << '\n';
         }
     }
 
-    cout << "Оставшиеся роботы: ";
+    std::cout << "Remaining robots: ";
     for (int i = 0; i < robots.size(); i++) {
-        cout << robots[i] << " ";
+        std::cout << robots[i] << " ";
     }
-    cout << endl;
+    std::cout << '\n';
 
     return 0;
 }
